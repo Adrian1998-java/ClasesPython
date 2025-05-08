@@ -43,9 +43,8 @@ print(concatenacion)
 '''
 a = 5
 b = 10
-temp = a
-a = b
-b = temp
+a, b = b, a  # Intercambio de valores
+print("Valores intercambiados:")
 print("a:", a)
 print("b:", b)
 
