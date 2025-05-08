@@ -23,16 +23,17 @@ Ejercicio 3: Se nos pide que introduzcamos la nota de un alumno, admitiendo deci
 '''
     
 nota = float(input("Introduce la nota del alumno: "))
-if nota < 5:
-    calificacion = "Insuficiente"
-elif nota < 6:
-    calificacion = "Suficiente"
-elif nota < 7:
-    calificacion = "Bien"
-elif nota < 9:
-    calificacion = "Notable"
-elif nota <= 10:
-    calificacion = "Sobresaliente"
+if nota >= 0 or nota <= 10:
+    if nota < 5:
+        calificacion = "Insuficiente"
+    elif nota < 6:
+        calificacion = "Suficiente"
+    elif nota < 7:
+        calificacion = "Bien"
+    elif nota < 9:
+        calificacion = "Notable"
+    elif nota <= 10:
+        calificacion = "Sobresaliente"
 else:
     calificacion = "Nota no válida"
 
