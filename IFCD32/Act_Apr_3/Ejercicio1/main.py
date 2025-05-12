@@ -1,7 +1,14 @@
 from geometria.area import area_circulo, area_cuadrado
 from geometria.perimetro import perimetro_cuadrado, perimetro_circulo
 
+from matematicas import suma, resta
 from matematicas import factorial
+
+a = input("Introduce un numero a: ")
+b = input("Introduce un numero b: ")
+
+print("El resultado de la suma es: ", suma(int(a), int(b)))
+print("El resultado de la resta es: ", resta(int(a), int(b)))
 
 # Medir el area y perimetro de un cuadrado y un circulo
 cuadrado = 5
