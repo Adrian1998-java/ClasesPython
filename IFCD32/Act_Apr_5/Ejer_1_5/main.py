@@ -9,14 +9,15 @@ class CuentaBancaria:
             self.saldo += cantidad
             print(f"Se han depositado {cantidad} unidades. Nuevo saldo: {self.saldo}")
         else:
-            print("La cantidad a depositar debe ser mayor que cero.")
+            raise ValueError("La cantidad a depositar debe ser mayor que cero.")
+        
 
     def retirar(self, cantidad):
         if 0 < cantidad <= self.saldo:
             self.saldo -= cantidad
             print(f"Se han retirado {cantidad} unidades. Nuevo saldo: {self.saldo}")
         else:
-            print("La cantidad a retirar debe ser mayor que cero y menor o igual al saldo actual.")
+            raise ValueError("La cantidad a retirar debe ser mayor que cero y menor o igual al saldo actual.")
 
     def imprimir_saldo(self):
         print(f"Saldo actual: {self.saldo}")

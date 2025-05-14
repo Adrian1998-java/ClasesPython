@@ -3,6 +3,7 @@
 # Se importan las clases de los ejercicios
 
 # Ejercicio 1
+from math import e
 import Ejer_1_1.main as ejer1
 # Ejercicio 2   
 import Ejer_1_2.main as ejer2
@@ -52,12 +53,27 @@ if __name__ == "__main__":
     print("Ejercicio 5")
     cuenta = ejer5.CuentaBancaria(1000)
     cuenta.imprimir_saldo()
-    cuenta.depositar(500)
-    cuenta.retirar(200)
+    try:
+        cuenta.depositar(500)
+    except ValueError as e:
+        print("Error:",e)
+    try:
+        cuenta.retirar(200)
+    except ValueError as e:
+        print("Error:",e)
     cuenta.imprimir_saldo()
-    cuenta.retirar(2000)  # Intento de retirar más de lo que hay en la cuenta
-    cuenta.depositar(-100)  # Intento de depositar una cantidad negativa
-    cuenta.imprimir_saldo()
+    
+    # Probamos las excepciones
+    try:
+        cuenta.depositar(-100)
+    except ValueError as e:
+        print("Error:",e)
+    try:
+        cuenta.retirar(-40)
+    except ValueError as e:
+        print("Error:",e)
+    
+
     print()
     # Fin de las pruebas
     print("Fin de las pruebas")
