@@ -50,14 +50,14 @@ if __name__ == "__main__":
     print()
     # Pruebas de Ejercicio 5
     print("Ejercicio 5")
-    circulo = ejer5.Circulo(5)
-    print(f"Radio del círculo: {circulo.obtener_radio()}")
-    print(f"Área del círculo: {circulo.calcular_area()}")
-    print(f"Perímetro del círculo: {circulo.calcular_perimetro()}")
-    circulo.establecer_radio(10)
-    print(f"Nuevo radio del círculo: {circulo.obtener_radio()}")
-    print(f"Nuevo área del círculo: {circulo.calcular_area()}")
-    print(f"Nuevo perímetro del círculo: {circulo.calcular_perimetro()}")
+    cuenta = ejer5.CuentaBancaria(1000)
+    cuenta.imprimir_saldo()
+    cuenta.depositar(500)
+    cuenta.retirar(200)
+    cuenta.imprimir_saldo()
+    cuenta.retirar(2000)  # Intento de retirar más de lo que hay en la cuenta
+    cuenta.depositar(-100)  # Intento de depositar una cantidad negativa
+    cuenta.imprimir_saldo()
     print()
     # Fin de las pruebas
     print("Fin de las pruebas")
